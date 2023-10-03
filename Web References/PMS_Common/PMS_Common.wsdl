@@ -1,0 +1,1153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="SendEmail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strToEmailId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SendEmailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="SendEmailResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TagnoAuto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strStatusId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intSex" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCondition" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strValue" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intUserId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TagnoAutoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TagnoAutoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SchemeAuto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intUserId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SchemeAutoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SchemeAutoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BreedAuto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intUserId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intSchemeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="BreedAutoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="BreedAutoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShedAuto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShedAutoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShedAutoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PenAuto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intShedId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PenAutoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PenAutoResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StatusRetrieve">
+        <s:complexType />
+      </s:element>
+      <s:element name="StatusRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StatusRetrieveResult" type="tns:ArrayOfMetaData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMetaData">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MetaData" nillable="true" type="tns:MetaData" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MetaData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MatingStatusRetrieve">
+        <s:complexType />
+      </s:element>
+      <s:element name="MatingStatusRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MatingStatusRetrieveResult" type="tns:ArrayOfMetaData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TagnoCheck">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTagno" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TagnoCheckResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TagnoCheckResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PigDetailUpdate">
+        <s:complexType />
+      </s:element>
+      <s:element name="PigDetailUpdateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="WeightRetrieve">
+        <s:complexType />
+      </s:element>
+      <s:element name="WeightRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WeightRetrieveResult" type="tns:ArrayOfMetaData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StageRetrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StageRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StageRetrieveResult" type="tns:ArrayOfMetaData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PigListRetrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pl" type="tns:PigList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PigList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Id" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Tagno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Scheme" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Breed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sireno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Damno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoofFarrowing" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NoofPiglets" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Shedno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Penno" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UserId" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PigListRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PigListRetrieveResult" type="tns:ArrayOfPigList" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPigList">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PigList" nillable="true" type="tns:PigList" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GroupBasedStatusRetrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intGroupId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GroupBasedStatusRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GroupBasedStatusRetrieveResult" type="tns:ArrayOfMetaData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int" type="s:int" />
+      <s:element name="ArrayOfString" nillable="true" type="tns:ArrayOfString" />
+      <s:element name="ArrayOfMetaData" nillable="true" type="tns:ArrayOfMetaData" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="SendEmailSoapIn">
+    <wsdl:part name="parameters" element="tns:SendEmail" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailSoapOut">
+    <wsdl:part name="parameters" element="tns:SendEmailResponse" />
+  </wsdl:message>
+  <wsdl:message name="TagnoAutoSoapIn">
+    <wsdl:part name="parameters" element="tns:TagnoAuto" />
+  </wsdl:message>
+  <wsdl:message name="TagnoAutoSoapOut">
+    <wsdl:part name="parameters" element="tns:TagnoAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="SchemeAutoSoapIn">
+    <wsdl:part name="parameters" element="tns:SchemeAuto" />
+  </wsdl:message>
+  <wsdl:message name="SchemeAutoSoapOut">
+    <wsdl:part name="parameters" element="tns:SchemeAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="BreedAutoSoapIn">
+    <wsdl:part name="parameters" element="tns:BreedAuto" />
+  </wsdl:message>
+  <wsdl:message name="BreedAutoSoapOut">
+    <wsdl:part name="parameters" element="tns:BreedAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShedAutoSoapIn">
+    <wsdl:part name="parameters" element="tns:ShedAuto" />
+  </wsdl:message>
+  <wsdl:message name="ShedAutoSoapOut">
+    <wsdl:part name="parameters" element="tns:ShedAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="PenAutoSoapIn">
+    <wsdl:part name="parameters" element="tns:PenAuto" />
+  </wsdl:message>
+  <wsdl:message name="PenAutoSoapOut">
+    <wsdl:part name="parameters" element="tns:PenAutoResponse" />
+  </wsdl:message>
+  <wsdl:message name="StatusRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:StatusRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="StatusRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:StatusRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="MatingStatusRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:MatingStatusRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="MatingStatusRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:MatingStatusRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="TagnoCheckSoapIn">
+    <wsdl:part name="parameters" element="tns:TagnoCheck" />
+  </wsdl:message>
+  <wsdl:message name="TagnoCheckSoapOut">
+    <wsdl:part name="parameters" element="tns:TagnoCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="PigDetailUpdateSoapIn">
+    <wsdl:part name="parameters" element="tns:PigDetailUpdate" />
+  </wsdl:message>
+  <wsdl:message name="PigDetailUpdateSoapOut">
+    <wsdl:part name="parameters" element="tns:PigDetailUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="WeightRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:WeightRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="WeightRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:WeightRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="StageRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:StageRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="StageRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:StageRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="PigListRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:PigListRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="PigListRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:PigListRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="GroupBasedStatusRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:GroupBasedStatusRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="GroupBasedStatusRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:GroupBasedStatusRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpGetIn">
+    <wsdl:part name="strUserId" type="s:string" />
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strToEmailId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="TagnoAutoHttpGetIn">
+    <wsdl:part name="strStatusId" type="s:string" />
+    <wsdl:part name="intSex" type="s:string" />
+    <wsdl:part name="intId" type="s:string" />
+    <wsdl:part name="strCondition" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+    <wsdl:part name="intUserId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TagnoAutoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SchemeAutoHttpGetIn">
+    <wsdl:part name="intUserId" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SchemeAutoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="BreedAutoHttpGetIn">
+    <wsdl:part name="intUserId" type="s:string" />
+    <wsdl:part name="intSchemeId" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BreedAutoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ShedAutoHttpGetIn">
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ShedAutoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="PenAutoHttpGetIn">
+    <wsdl:part name="intShedId" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PenAutoHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="StatusRetrieveHttpGetIn" />
+  <wsdl:message name="StatusRetrieveHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfMetaData" />
+  </wsdl:message>
+  <wsdl:message name="MatingStatusRetrieveHttpGetIn" />
+  <wsdl:message name="MatingStatusRetrieveHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfMetaData" />
+  </wsdl:message>
+  <wsdl:message name="TagnoCheckHttpGetIn">
+    <wsdl:part name="strTagno" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TagnoCheckHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PigDetailUpdateHttpGetIn" />
+  <wsdl:message name="PigDetailUpdateHttpGetOut" />
+  <wsdl:message name="WeightRetrieveHttpGetIn" />
+  <wsdl:message name="WeightRetrieveHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfMetaData" />
+  </wsdl:message>
+  <wsdl:message name="StageRetrieveHttpGetIn">
+    <wsdl:part name="intId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="StageRetrieveHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfMetaData" />
+  </wsdl:message>
+  <wsdl:message name="GroupBasedStatusRetrieveHttpGetIn">
+    <wsdl:part name="intGroupId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GroupBasedStatusRetrieveHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfMetaData" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpPostIn">
+    <wsdl:part name="strUserId" type="s:string" />
+    <wsdl:part name="strUserName" type="s:string" />
+    <wsdl:part name="strToEmailId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SendEmailHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="TagnoAutoHttpPostIn">
+    <wsdl:part name="strStatusId" type="s:string" />
+    <wsdl:part name="intSex" type="s:string" />
+    <wsdl:part name="intId" type="s:string" />
+    <wsdl:part name="strCondition" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+    <wsdl:part name="intUserId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TagnoAutoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="SchemeAutoHttpPostIn">
+    <wsdl:part name="intUserId" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="SchemeAutoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="BreedAutoHttpPostIn">
+    <wsdl:part name="intUserId" type="s:string" />
+    <wsdl:part name="intSchemeId" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="BreedAutoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="ShedAutoHttpPostIn">
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="ShedAutoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="PenAutoHttpPostIn">
+    <wsdl:part name="intShedId" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PenAutoHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfString" />
+  </wsdl:message>
+  <wsdl:message name="StatusRetrieveHttpPostIn" />
+  <wsdl:message name="StatusRetrieveHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfMetaData" />
+  </wsdl:message>
+  <wsdl:message name="MatingStatusRetrieveHttpPostIn" />
+  <wsdl:message name="MatingStatusRetrieveHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfMetaData" />
+  </wsdl:message>
+  <wsdl:message name="TagnoCheckHttpPostIn">
+    <wsdl:part name="strTagno" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="TagnoCheckHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="PigDetailUpdateHttpPostIn" />
+  <wsdl:message name="PigDetailUpdateHttpPostOut" />
+  <wsdl:message name="WeightRetrieveHttpPostIn" />
+  <wsdl:message name="WeightRetrieveHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfMetaData" />
+  </wsdl:message>
+  <wsdl:message name="StageRetrieveHttpPostIn">
+    <wsdl:part name="intId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="StageRetrieveHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfMetaData" />
+  </wsdl:message>
+  <wsdl:message name="GroupBasedStatusRetrieveHttpPostIn">
+    <wsdl:part name="intGroupId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GroupBasedStatusRetrieveHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfMetaData" />
+  </wsdl:message>
+  <wsdl:portType name="PMS_CommonSoap">
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailSoapIn" />
+      <wsdl:output message="tns:SendEmailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TagnoAuto">
+      <wsdl:input message="tns:TagnoAutoSoapIn" />
+      <wsdl:output message="tns:TagnoAutoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SchemeAuto">
+      <wsdl:input message="tns:SchemeAutoSoapIn" />
+      <wsdl:output message="tns:SchemeAutoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BreedAuto">
+      <wsdl:input message="tns:BreedAutoSoapIn" />
+      <wsdl:output message="tns:BreedAutoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShedAuto">
+      <wsdl:input message="tns:ShedAutoSoapIn" />
+      <wsdl:output message="tns:ShedAutoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PenAuto">
+      <wsdl:input message="tns:PenAutoSoapIn" />
+      <wsdl:output message="tns:PenAutoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StatusRetrieve">
+      <wsdl:input message="tns:StatusRetrieveSoapIn" />
+      <wsdl:output message="tns:StatusRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MatingStatusRetrieve">
+      <wsdl:input message="tns:MatingStatusRetrieveSoapIn" />
+      <wsdl:output message="tns:MatingStatusRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TagnoCheck">
+      <wsdl:input message="tns:TagnoCheckSoapIn" />
+      <wsdl:output message="tns:TagnoCheckSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PigDetailUpdate">
+      <wsdl:input message="tns:PigDetailUpdateSoapIn" />
+      <wsdl:output message="tns:PigDetailUpdateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WeightRetrieve">
+      <wsdl:input message="tns:WeightRetrieveSoapIn" />
+      <wsdl:output message="tns:WeightRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StageRetrieve">
+      <wsdl:input message="tns:StageRetrieveSoapIn" />
+      <wsdl:output message="tns:StageRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PigListRetrieve">
+      <wsdl:input message="tns:PigListRetrieveSoapIn" />
+      <wsdl:output message="tns:PigListRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupBasedStatusRetrieve">
+      <wsdl:input message="tns:GroupBasedStatusRetrieveSoapIn" />
+      <wsdl:output message="tns:GroupBasedStatusRetrieveSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PMS_CommonHttpGet">
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailHttpGetIn" />
+      <wsdl:output message="tns:SendEmailHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TagnoAuto">
+      <wsdl:input message="tns:TagnoAutoHttpGetIn" />
+      <wsdl:output message="tns:TagnoAutoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SchemeAuto">
+      <wsdl:input message="tns:SchemeAutoHttpGetIn" />
+      <wsdl:output message="tns:SchemeAutoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BreedAuto">
+      <wsdl:input message="tns:BreedAutoHttpGetIn" />
+      <wsdl:output message="tns:BreedAutoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShedAuto">
+      <wsdl:input message="tns:ShedAutoHttpGetIn" />
+      <wsdl:output message="tns:ShedAutoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PenAuto">
+      <wsdl:input message="tns:PenAutoHttpGetIn" />
+      <wsdl:output message="tns:PenAutoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StatusRetrieve">
+      <wsdl:input message="tns:StatusRetrieveHttpGetIn" />
+      <wsdl:output message="tns:StatusRetrieveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MatingStatusRetrieve">
+      <wsdl:input message="tns:MatingStatusRetrieveHttpGetIn" />
+      <wsdl:output message="tns:MatingStatusRetrieveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TagnoCheck">
+      <wsdl:input message="tns:TagnoCheckHttpGetIn" />
+      <wsdl:output message="tns:TagnoCheckHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PigDetailUpdate">
+      <wsdl:input message="tns:PigDetailUpdateHttpGetIn" />
+      <wsdl:output message="tns:PigDetailUpdateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WeightRetrieve">
+      <wsdl:input message="tns:WeightRetrieveHttpGetIn" />
+      <wsdl:output message="tns:WeightRetrieveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StageRetrieve">
+      <wsdl:input message="tns:StageRetrieveHttpGetIn" />
+      <wsdl:output message="tns:StageRetrieveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupBasedStatusRetrieve">
+      <wsdl:input message="tns:GroupBasedStatusRetrieveHttpGetIn" />
+      <wsdl:output message="tns:GroupBasedStatusRetrieveHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PMS_CommonHttpPost">
+    <wsdl:operation name="SendEmail">
+      <wsdl:input message="tns:SendEmailHttpPostIn" />
+      <wsdl:output message="tns:SendEmailHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TagnoAuto">
+      <wsdl:input message="tns:TagnoAutoHttpPostIn" />
+      <wsdl:output message="tns:TagnoAutoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SchemeAuto">
+      <wsdl:input message="tns:SchemeAutoHttpPostIn" />
+      <wsdl:output message="tns:SchemeAutoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="BreedAuto">
+      <wsdl:input message="tns:BreedAutoHttpPostIn" />
+      <wsdl:output message="tns:BreedAutoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShedAuto">
+      <wsdl:input message="tns:ShedAutoHttpPostIn" />
+      <wsdl:output message="tns:ShedAutoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PenAuto">
+      <wsdl:input message="tns:PenAutoHttpPostIn" />
+      <wsdl:output message="tns:PenAutoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StatusRetrieve">
+      <wsdl:input message="tns:StatusRetrieveHttpPostIn" />
+      <wsdl:output message="tns:StatusRetrieveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MatingStatusRetrieve">
+      <wsdl:input message="tns:MatingStatusRetrieveHttpPostIn" />
+      <wsdl:output message="tns:MatingStatusRetrieveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TagnoCheck">
+      <wsdl:input message="tns:TagnoCheckHttpPostIn" />
+      <wsdl:output message="tns:TagnoCheckHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PigDetailUpdate">
+      <wsdl:input message="tns:PigDetailUpdateHttpPostIn" />
+      <wsdl:output message="tns:PigDetailUpdateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="WeightRetrieve">
+      <wsdl:input message="tns:WeightRetrieveHttpPostIn" />
+      <wsdl:output message="tns:WeightRetrieveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StageRetrieve">
+      <wsdl:input message="tns:StageRetrieveHttpPostIn" />
+      <wsdl:output message="tns:StageRetrieveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GroupBasedStatusRetrieve">
+      <wsdl:input message="tns:GroupBasedStatusRetrieveHttpPostIn" />
+      <wsdl:output message="tns:GroupBasedStatusRetrieveHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PMS_CommonSoap" type="tns:PMS_CommonSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendEmail">
+      <soap:operation soapAction="http://tempuri.org/SendEmail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagnoAuto">
+      <soap:operation soapAction="http://tempuri.org/TagnoAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchemeAuto">
+      <soap:operation soapAction="http://tempuri.org/SchemeAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BreedAuto">
+      <soap:operation soapAction="http://tempuri.org/BreedAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShedAuto">
+      <soap:operation soapAction="http://tempuri.org/ShedAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PenAuto">
+      <soap:operation soapAction="http://tempuri.org/PenAuto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatusRetrieve">
+      <soap:operation soapAction="http://tempuri.org/StatusRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MatingStatusRetrieve">
+      <soap:operation soapAction="http://tempuri.org/MatingStatusRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagnoCheck">
+      <soap:operation soapAction="http://tempuri.org/TagnoCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PigDetailUpdate">
+      <soap:operation soapAction="http://tempuri.org/PigDetailUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WeightRetrieve">
+      <soap:operation soapAction="http://tempuri.org/WeightRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StageRetrieve">
+      <soap:operation soapAction="http://tempuri.org/StageRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PigListRetrieve">
+      <soap:operation soapAction="http://tempuri.org/PigListRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupBasedStatusRetrieve">
+      <soap:operation soapAction="http://tempuri.org/GroupBasedStatusRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PMS_CommonSoap12" type="tns:PMS_CommonSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendEmail">
+      <soap12:operation soapAction="http://tempuri.org/SendEmail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagnoAuto">
+      <soap12:operation soapAction="http://tempuri.org/TagnoAuto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchemeAuto">
+      <soap12:operation soapAction="http://tempuri.org/SchemeAuto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BreedAuto">
+      <soap12:operation soapAction="http://tempuri.org/BreedAuto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShedAuto">
+      <soap12:operation soapAction="http://tempuri.org/ShedAuto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PenAuto">
+      <soap12:operation soapAction="http://tempuri.org/PenAuto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatusRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/StatusRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MatingStatusRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/MatingStatusRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagnoCheck">
+      <soap12:operation soapAction="http://tempuri.org/TagnoCheck" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PigDetailUpdate">
+      <soap12:operation soapAction="http://tempuri.org/PigDetailUpdate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WeightRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/WeightRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StageRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/StageRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PigListRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/PigListRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupBasedStatusRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/GroupBasedStatusRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PMS_CommonHttpGet" type="tns:PMS_CommonHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="SendEmail">
+      <http:operation location="/SendEmail" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagnoAuto">
+      <http:operation location="/TagnoAuto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchemeAuto">
+      <http:operation location="/SchemeAuto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BreedAuto">
+      <http:operation location="/BreedAuto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShedAuto">
+      <http:operation location="/ShedAuto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PenAuto">
+      <http:operation location="/PenAuto" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatusRetrieve">
+      <http:operation location="/StatusRetrieve" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MatingStatusRetrieve">
+      <http:operation location="/MatingStatusRetrieve" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagnoCheck">
+      <http:operation location="/TagnoCheck" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PigDetailUpdate">
+      <http:operation location="/PigDetailUpdate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WeightRetrieve">
+      <http:operation location="/WeightRetrieve" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StageRetrieve">
+      <http:operation location="/StageRetrieve" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupBasedStatusRetrieve">
+      <http:operation location="/GroupBasedStatusRetrieve" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PMS_CommonHttpPost" type="tns:PMS_CommonHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="SendEmail">
+      <http:operation location="/SendEmail" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagnoAuto">
+      <http:operation location="/TagnoAuto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SchemeAuto">
+      <http:operation location="/SchemeAuto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BreedAuto">
+      <http:operation location="/BreedAuto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShedAuto">
+      <http:operation location="/ShedAuto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PenAuto">
+      <http:operation location="/PenAuto" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StatusRetrieve">
+      <http:operation location="/StatusRetrieve" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MatingStatusRetrieve">
+      <http:operation location="/MatingStatusRetrieve" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TagnoCheck">
+      <http:operation location="/TagnoCheck" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PigDetailUpdate">
+      <http:operation location="/PigDetailUpdate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="WeightRetrieve">
+      <http:operation location="/WeightRetrieve" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StageRetrieve">
+      <http:operation location="/StageRetrieve" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GroupBasedStatusRetrieve">
+      <http:operation location="/GroupBasedStatusRetrieve" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PMS_Common">
+    <wsdl:port name="PMS_CommonSoap" binding="tns:PMS_CommonSoap">
+      <soap:address location="http://localhost:5631/PMS_Common.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PMS_CommonSoap12" binding="tns:PMS_CommonSoap12">
+      <soap12:address location="http://localhost:5631/PMS_Common.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PMS_CommonHttpGet" binding="tns:PMS_CommonHttpGet">
+      <http:address location="http://localhost:5631/PMS_Common.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PMS_CommonHttpPost" binding="tns:PMS_CommonHttpPost">
+      <http:address location="http://localhost:5631/PMS_Common.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

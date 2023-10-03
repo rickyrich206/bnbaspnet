@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="StockReportRetrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sr" type="tns:StockReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="StockReport">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SchemeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BreedId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockMonth" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StockYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBSM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBSF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBTM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBTF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBGT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BSM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BSF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BSAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BSAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BSGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BSGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITSM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITSF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBSM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBSF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBTM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBTF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBGT" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="StockReportRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="StockReportRetrieveResult" type="tns:ArrayOfStockReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfStockReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StockReport" nillable="true" type="tns:StockReport" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="FeedReportRetrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fr" type="tns:FeedReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="FeedReport">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SchemeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="FeedMonth" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FeedYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OB_Adult" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OB_Grower" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OB_Creeper" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FP_Adult" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FP_Grower" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FP_Creeper" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="T_Adult" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="T_Grower" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="T_Creeper" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FIB_Adult" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FIB_Grower" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FIB_Creeper" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FIF_Adult" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FIF_Grower" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CB_Adult" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CB_Grower" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CB_Creeper" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="FeedReportRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FeedReportRetrieveResult" type="tns:ArrayOfFeedReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFeedReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="FeedReport" nillable="true" type="tns:FeedReport" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PurchaseReportRetrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pr" type="tns:PurchaseReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PurchaseReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TagNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseMonth" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseYear" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Scheme" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Breed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PurchaseWeight" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiptNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PurchaseReportRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PurchaseReportRetrieveResult" type="tns:ArrayOfPurchaseReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPurchaseReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PurchaseReport" nillable="true" type="tns:PurchaseReport" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SellingReportRetrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sr" type="tns:SellingReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SellingReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="StatusId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellingMonth" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SellingYear" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TagNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Scheme" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Breed" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Weight" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BaseRate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RateperKg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Amount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiptNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Customer" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="SellingReportRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SellingReportRetrieveResult" type="tns:ArrayOfSellingReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSellingReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SellingReport" nillable="true" type="tns:SellingReport" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeathReportRetrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dr" type="tns:DeathReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DeathReport">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SchemeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BreedId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ReportType" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeathMonth" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeathYear" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TagNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Stage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Year" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Month" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Day" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Sex" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WriteValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="History" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClinicalSigns" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GrossLesions" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MaterialSent" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TentativeDiagnosis" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DeathReportRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeathReportRetrieveResult" type="tns:ArrayOfDeathReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDeathReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DeathReport" nillable="true" type="tns:DeathReport" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DailyStockReportRetrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dsr" type="tns:DailyStockReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DailyStockReport">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SchemeId" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BreedId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBSM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBSF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBTM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBTF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OBGT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BSM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BSF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BSAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BSAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BSGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BSGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DSF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITSM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ITSF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBAM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBAF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBGM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBGF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBSM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBSF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBTM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBTF" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CBGT" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="DailyStockReportRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DailyStockReportRetrieveResult" type="tns:ArrayOfDailyStockReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDailyStockReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DailyStockReport" nillable="true" type="tns:DailyStockReport" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="EconomicIndicesReportRetrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="intSchemeId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intFy" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EconomicIndicesReportRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="EconomicIndicesReportRetrieveResult" type="tns:ArrayOfEconomicIndicesReport" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfEconomicIndicesReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="EconomicIndicesReport" nillable="true" type="tns:EconomicIndicesReport" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EconomicIndicesReport">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FeedCost" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SwillCost" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherCost" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VeterinaryCharges" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ElectricityCharges" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LabourCost" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VariableanyOther" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VariableOthers" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalCost" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AnimalSale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MeatSale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ManureSale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GunnySale" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiptAnyOther" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReceiptOthers" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TotalReceiptsCost" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NRVC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NRVCPer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NRFC" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NRFCPer" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COPLiveBody" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NetFarmincome" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NetMarketValue" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COPPiglet" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ADGBW" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ADGWM" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOPP" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOPM" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="PigGenerationRetrieve">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTagNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PigGenerationRetrieveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PigGenerationRetrieveResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ArrayOfEconomicIndicesReport" nillable="true" type="tns:ArrayOfEconomicIndicesReport" />
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="StockReportRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:StockReportRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="StockReportRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:StockReportRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="FeedReportRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:FeedReportRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="FeedReportRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:FeedReportRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseReportRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:PurchaseReportRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="PurchaseReportRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:PurchaseReportRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="SellingReportRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:SellingReportRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="SellingReportRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:SellingReportRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeathReportRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:DeathReportRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="DeathReportRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:DeathReportRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="DailyStockReportRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:DailyStockReportRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="DailyStockReportRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:DailyStockReportRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="EconomicIndicesReportRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:EconomicIndicesReportRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="EconomicIndicesReportRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:EconomicIndicesReportRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="PigGenerationRetrieveSoapIn">
+    <wsdl:part name="parameters" element="tns:PigGenerationRetrieve" />
+  </wsdl:message>
+  <wsdl:message name="PigGenerationRetrieveSoapOut">
+    <wsdl:part name="parameters" element="tns:PigGenerationRetrieveResponse" />
+  </wsdl:message>
+  <wsdl:message name="EconomicIndicesReportRetrieveHttpGetIn">
+    <wsdl:part name="intSchemeId" type="s:string" />
+    <wsdl:part name="intFy" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EconomicIndicesReportRetrieveHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEconomicIndicesReport" />
+  </wsdl:message>
+  <wsdl:message name="PigGenerationRetrieveHttpGetIn">
+    <wsdl:part name="strTagNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PigGenerationRetrieveHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="EconomicIndicesReportRetrieveHttpPostIn">
+    <wsdl:part name="intSchemeId" type="s:string" />
+    <wsdl:part name="intFy" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="EconomicIndicesReportRetrieveHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfEconomicIndicesReport" />
+  </wsdl:message>
+  <wsdl:message name="PigGenerationRetrieveHttpPostIn">
+    <wsdl:part name="strTagNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="PigGenerationRetrieveHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="PMS_ReportsSoap">
+    <wsdl:operation name="StockReportRetrieve">
+      <wsdl:input message="tns:StockReportRetrieveSoapIn" />
+      <wsdl:output message="tns:StockReportRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FeedReportRetrieve">
+      <wsdl:input message="tns:FeedReportRetrieveSoapIn" />
+      <wsdl:output message="tns:FeedReportRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseReportRetrieve">
+      <wsdl:input message="tns:PurchaseReportRetrieveSoapIn" />
+      <wsdl:output message="tns:PurchaseReportRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SellingReportRetrieve">
+      <wsdl:input message="tns:SellingReportRetrieveSoapIn" />
+      <wsdl:output message="tns:SellingReportRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeathReportRetrieve">
+      <wsdl:input message="tns:DeathReportRetrieveSoapIn" />
+      <wsdl:output message="tns:DeathReportRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DailyStockReportRetrieve">
+      <wsdl:input message="tns:DailyStockReportRetrieveSoapIn" />
+      <wsdl:output message="tns:DailyStockReportRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EconomicIndicesReportRetrieve">
+      <wsdl:input message="tns:EconomicIndicesReportRetrieveSoapIn" />
+      <wsdl:output message="tns:EconomicIndicesReportRetrieveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PigGenerationRetrieve">
+      <wsdl:input message="tns:PigGenerationRetrieveSoapIn" />
+      <wsdl:output message="tns:PigGenerationRetrieveSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PMS_ReportsHttpGet">
+    <wsdl:operation name="EconomicIndicesReportRetrieve">
+      <wsdl:input message="tns:EconomicIndicesReportRetrieveHttpGetIn" />
+      <wsdl:output message="tns:EconomicIndicesReportRetrieveHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PigGenerationRetrieve">
+      <wsdl:input message="tns:PigGenerationRetrieveHttpGetIn" />
+      <wsdl:output message="tns:PigGenerationRetrieveHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="PMS_ReportsHttpPost">
+    <wsdl:operation name="EconomicIndicesReportRetrieve">
+      <wsdl:input message="tns:EconomicIndicesReportRetrieveHttpPostIn" />
+      <wsdl:output message="tns:EconomicIndicesReportRetrieveHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PigGenerationRetrieve">
+      <wsdl:input message="tns:PigGenerationRetrieveHttpPostIn" />
+      <wsdl:output message="tns:PigGenerationRetrieveHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PMS_ReportsSoap" type="tns:PMS_ReportsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StockReportRetrieve">
+      <soap:operation soapAction="http://tempuri.org/StockReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FeedReportRetrieve">
+      <soap:operation soapAction="http://tempuri.org/FeedReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseReportRetrieve">
+      <soap:operation soapAction="http://tempuri.org/PurchaseReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SellingReportRetrieve">
+      <soap:operation soapAction="http://tempuri.org/SellingReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeathReportRetrieve">
+      <soap:operation soapAction="http://tempuri.org/DeathReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DailyStockReportRetrieve">
+      <soap:operation soapAction="http://tempuri.org/DailyStockReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EconomicIndicesReportRetrieve">
+      <soap:operation soapAction="http://tempuri.org/EconomicIndicesReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PigGenerationRetrieve">
+      <soap:operation soapAction="http://tempuri.org/PigGenerationRetrieve" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PMS_ReportsSoap12" type="tns:PMS_ReportsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="StockReportRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/StockReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FeedReportRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/FeedReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PurchaseReportRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/PurchaseReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SellingReportRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/SellingReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeathReportRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/DeathReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DailyStockReportRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/DailyStockReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EconomicIndicesReportRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/EconomicIndicesReportRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PigGenerationRetrieve">
+      <soap12:operation soapAction="http://tempuri.org/PigGenerationRetrieve" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PMS_ReportsHttpGet" type="tns:PMS_ReportsHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="EconomicIndicesReportRetrieve">
+      <http:operation location="/EconomicIndicesReportRetrieve" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PigGenerationRetrieve">
+      <http:operation location="/PigGenerationRetrieve" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PMS_ReportsHttpPost" type="tns:PMS_ReportsHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="EconomicIndicesReportRetrieve">
+      <http:operation location="/EconomicIndicesReportRetrieve" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PigGenerationRetrieve">
+      <http:operation location="/PigGenerationRetrieve" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PMS_Reports">
+    <wsdl:port name="PMS_ReportsSoap" binding="tns:PMS_ReportsSoap">
+      <soap:address location="http://localhost:5631/PMS_Reports.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PMS_ReportsSoap12" binding="tns:PMS_ReportsSoap12">
+      <soap12:address location="http://localhost:5631/PMS_Reports.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PMS_ReportsHttpGet" binding="tns:PMS_ReportsHttpGet">
+      <http:address location="http://localhost:5631/PMS_Reports.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PMS_ReportsHttpPost" binding="tns:PMS_ReportsHttpPost">
+      <http:address location="http://localhost:5631/PMS_Reports.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
