@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="PMS.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PMS_PMS_Common_PMS_Common" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:5631/PMS_Common.asmx</Value>
+    </Setting>
+    <Setting Name="PMS_PMS_Master_PMS_Master" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:5631/PMS_Master.asmx</Value>
+    </Setting>
+    <Setting Name="PMS_PMS_Entries_PMS_Entries" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:5631/PMS_Entries.asmx</Value>
+    </Setting>
+    <Setting Name="PMS_PMS_Reports_PMS_Reports" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:5631/PMS_Reports.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

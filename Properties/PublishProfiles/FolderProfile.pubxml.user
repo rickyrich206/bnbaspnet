@@ -1,0 +1,736 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\Publish\PMS</_PublishTargetUrl>
+    <History>True|2023-07-10T11:22:51.8089968Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/App_global.asax.compiled">
+      <publishTime>07/10/2023 16:52:31</publishTime>
+    </File>
+    <File Include="bin/App_global.asax.dll">
+      <publishTime>07/10/2023 16:52:31</publishTime>
+    </File>
+    <File Include="bin/DBUtility.dll">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="bin/EPPlus.dll">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="bin/ICSharpCode.SharpZipLib.dll">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="bin/LoggerUtility.dll">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="bin/NPOI.dll">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="bin/NPOI.OOXML.dll">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="bin/NPOI.OpenXml4Net.dll">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="bin/NPOI.OpenXmlFormats.dll">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="bin/PMS.dll">
+      <publishTime>07/10/2023 16:52:06</publishTime>
+    </File>
+    <File Include="bin/PMS.pdb">
+      <publishTime>07/10/2023 16:52:06</publishTime>
+    </File>
+    <File Include="bin/PMS.XmlSerializers.dll">
+      <publishTime>07/10/2023 16:52:10</publishTime>
+    </File>
+    <File Include="bin/PMSCLS.dll">
+      <publishTime>07/10/2023 16:49:37</publishTime>
+    </File>
+    <File Include="bin/PMSCLS.pdb">
+      <publishTime>07/10/2023 16:49:37</publishTime>
+    </File>
+    <File Include="bin/Spire.DataExport.dll">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="bin/System.Web.DataVisualization.Design.dll">
+      <publishTime>09/26/2012 03:16:08</publishTime>
+    </File>
+    <File Include="bin/System.Web.DataVisualization.dll">
+      <publishTime>09/26/2012 03:16:08</publishTime>
+    </File>
+    <File Include="bin/Telerik.Web.UI.dll">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="bin/USA.dll">
+      <publishTime>04/06/2018 22:57:14</publishTime>
+    </File>
+    <File Include="Dashboard/frmDashboard.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmCarcassDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmDeathDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmDewormingDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmEconomicIndicesDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmFarmerRegistrationDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmFarmerTrainingDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmFarrowingDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmFeedDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmMatingDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmPigDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmPigWeightDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmPurchaseDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmSellingDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmTransferDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmTreatmentDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmVaccinationDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmValuationDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="Entries/frmWeaningDetails.aspx">
+      <publishTime>04/06/2018 22:57:00</publishTime>
+    </File>
+    <File Include="fileUploader.ashx">
+      <publishTime>04/06/2018 22:57:14</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>04/06/2018 22:57:14</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>04/06/2018 22:57:14</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>04/06/2018 22:57:14</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>04/06/2018 22:57:14</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>04/06/2018 22:57:14</publishTime>
+    </File>
+    <File Include="frmCaptche.aspx">
+      <publishTime>04/06/2018 22:57:14</publishTime>
+    </File>
+    <File Include="frmForgotPassword.aspx">
+      <publishTime>01/22/2020 13:06:34</publishTime>
+    </File>
+    <File Include="frmLogin.aspx">
+      <publishTime>01/22/2020 13:06:34</publishTime>
+    </File>
+    <File Include="frmResetPassword.aspx">
+      <publishTime>01/22/2020 13:06:34</publishTime>
+    </File>
+    <File Include="Html/frmAnnualReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmDailyStockReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmDeathReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmEADRReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmEconomicIndicesReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmFeedReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmMonthlyReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmPigDetailReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmPurchaseReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmQuarterlyReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmReminder.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmSellingReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmStockReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Html/frmValuationAbstract.aspx">
+      <publishTime>08/27/2018 15:31:58</publishTime>
+    </File>
+    <File Include="Html/frmValuationReport.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ActionBar/add.jpg">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ActionBar/delete-icon.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ActionBar/Rename.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ActionBar/vssver2.scc">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/add.jpg">
+      <publishTime>07/07/2023 12:01:37</publishTime>
+    </File>
+    <File Include="Images/change_password.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/delete-icon.png">
+      <publishTime>07/07/2023 12:01:37</publishTime>
+    </File>
+    <File Include="Images/Excel.jpg">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/Export.jpg">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/glyphicons-halflings-white.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/glyphicons-halflings.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/icar.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ico-refresh.gif">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/Import.jpg">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/logo.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/logout.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/Rename.png">
+      <publishTime>07/07/2023 12:01:37</publishTime>
+    </File>
+    <File Include="Images/ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-bg_diagonals-thick_20_666666_40x40.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-bg_flat_10_000000_40x100.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-bg_glass_100_f6f6f6_1x400.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-bg_glass_100_fdf5ce_1x400.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-bg_gloss-wave_35_f6a828_500x100 no gri.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-bg_gloss-wave_35_f6a828_500x100-or.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-icons_222222_256x240.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-icons_228ef1_256x240.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-icons_ef8c08_256x240.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-icons_ffd27a_256x240.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Images/ui-icons_ffffff_256x240.png">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap-datetimepicker.min.css">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap-datetimepicker.min.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap-multiselect.css">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap-multiselect.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap-table.js">
+      <publishTime>07/07/2023 12:01:37</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap-table.min.css">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap-table.min.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap-theme.css">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap-theme.css.map">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap-theme.min.css">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap-theme.min.css.map">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap.css">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap.css.map">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap.min.css">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap.min.css.map">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/bootstrap.min.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/chart.js">
+      <publishTime>07/07/2023 17:22:19</publishTime>
+    </File>
+    <File Include="Libraries/FileSaver.min.js">
+      <publishTime>07/07/2023 12:01:37</publishTime>
+    </File>
+    <File Include="Libraries/fileUpload.css">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/gettheme.js">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Libraries/jit.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/jquery-1.12.0.min.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/jquery-1.6.2.min.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/jquery-1.9.1.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/jquery-1.9.1.min.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/jquery-1.9.1.min.map">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/jquery-ui.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/jquery-ui.min.css">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/jquery-ui.min.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/jquery.cookie.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/moment.min.js">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Libraries/morris.css">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Libraries/Style.css">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Master/frmBreed.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Master/frmChangePassword.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Master/frmReminderDue.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Master/frmRole.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Master/frmRoleAccess.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Master/frmScheme.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Master/frmShed.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Master/frmUser.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="Master/frmVaccination.aspx">
+      <publishTime>04/06/2018 22:57:06</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/06/2018 22:57:14</publishTime>
+    </File>
+    <File Include="PrecompiledApp.config">
+      <publishTime>07/10/2023 16:52:20</publishTime>
+    </File>
+    <File Include="Reports/frmAnimalReport.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmAnnualReport.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmDailyStockReport.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmDeathReport.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmEADR.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmEconomicIndicesReport.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmFeedReport.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmMonthlyReport.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmPigGeneration.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmPurchaseReport.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmQuarterlyReport.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmSellingReport.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmShedDiagram.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmSowCard.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmStockReport.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Reports/frmValuationAbstract.aspx">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/AnimalReport.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/AnnualReport.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/Breed.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/CarcassDetails.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/ChangePassword.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/Common.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/DailyStockReport.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/Dashboard.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/DeathDetail.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/DeathReport.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/DewormingDetail.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/EADRReport.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/EconomicIndicesDetails.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/EconomicIndicesReport.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/FarmerRegistrationDetails.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/FarmerTrainingDetails.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/FarrowingDetail.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/FeedDetails.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/FeedReport.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/fileUpload.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/ForgotPassword.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/Login.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/MatingDetail.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/MonthlyReport.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/PigDetails.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/PigGeneration.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/PigWeightDetails.js">
+      <publishTime>08/02/2018 14:21:12</publishTime>
+    </File>
+    <File Include="Scripts/PurchaseDetails.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/PurchaseReport.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/QuarterlyReport.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/Reminder.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/ReminderDue.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/ResetPassword.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/Role.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/RoleAccess.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/RoleMenu.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/Scheme.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/scripts.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/SellingDetails.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/SellingReport.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/Shed.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/SowCard.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/StockReport.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/TransferDetails.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/TreatmentDetail.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/User.js">
+      <publishTime>04/06/2018 22:57:10</publishTime>
+    </File>
+    <File Include="Scripts/Vaccination.js">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="Scripts/VaccinationDetail.js">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="Scripts/ValuationAbstract.js">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="Scripts/ValuationDetail.js">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="Scripts/Visual.js">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="Scripts/WeaningDetails.js">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="UserControl/Banner.ascx">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="UserControl/BottomBanner.ascx">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="UserControl/PigDetail.ascx">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="UserControl/TopBanner.ascx">
+      <publishTime>01/22/2020 13:06:46</publishTime>
+    </File>
+    <File Include="Web References/PMS_Common/MetaData.datasource">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="Web References/PMS_Common/PigList.datasource">
+      <publishTime>04/06/2018 22:57:12</publishTime>
+    </File>
+    <File Include="Web References/PMS_Entries/FarrowingDetail.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Entries/MatingDetail.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Entries/PigDetail.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Entries/WeaningDetail.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Master/Breed.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Master/ChangePassword.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Master/ForgotPassword.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Master/Login.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Master/Reference.map">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Master/Role.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Master/RoleAccess.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Master/Scheme.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Master/Shed.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Master/User.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Master/Vaccination.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Reports/DailyStockReport.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Reports/DeathReport.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Reports/EconomicIndicesReport.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Reports/FeedReport.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Reports/PurchaseReport.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Reports/Reference.map">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Reports/SellingReport.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web References/PMS_Reports/StockReport.datasource">
+      <publishTime>07/07/2023 12:01:38</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>07/10/2023 16:52:11</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
